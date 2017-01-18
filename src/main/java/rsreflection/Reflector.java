@@ -30,26 +30,22 @@ public class Reflector extends URLClassLoader {
 		return getFieldValueByDetails(f.getClassName(), f.getFieldName());
 	}
 	
-	public Object getFieldValueByDetails(String className, String fieldName) {
+	Object getFieldValueByDetails(String className, String fieldName) {
 
 		Object o = null;
 		try {
 			Field field = loadClass(className).getDeclaredField(fieldName);
 			field.setAccessible(true);
 			return field.get(null);
-		} catch (ClassNotFoundException ex) {
-			Logger.getLogger(Reflector.class.getName()).log(Level.SEVERE, null, ex);
-		} catch (IllegalArgumentException ex) {
-			Logger.getLogger(Reflector.class.getName()).log(Level.SEVERE, null, ex);
-		} catch (IllegalAccessException ex) {
-			Logger.getLogger(Reflector.class.getName()).log(Level.SEVERE, null, ex);
-		} catch (NoSuchFieldException ex) {
-			Logger.getLogger(Reflector.class.getName()).log(Level.SEVERE, null, ex);
-		} catch (SecurityException ex) {
+		} catch (ClassNotFoundException
+				| IllegalArgumentException
+				| IllegalAccessException
+				| SecurityException
+				| NoSuchFieldException ex) {
 			Logger.getLogger(Reflector.class.getName()).log(Level.SEVERE, null, ex);
 		}
 
-		return o;
+		return null;
 	}
 
 	public void setHooks(HashMap<String, FieldInfo> hookMap) {
