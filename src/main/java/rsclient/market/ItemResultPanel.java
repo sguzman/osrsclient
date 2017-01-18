@@ -5,8 +5,15 @@
  */
 package rsclient.market;
 
-import java.awt.Color;
-import java.awt.Dimension;
+import logic.ZybezItemListing;
+import logic.ZybezOffer;
+import net.miginfocom.swing.MigLayout;
+import org.pushingpixels.trident.Timeline;
+
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import javax.swing.border.EtchedBorder;
+import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
@@ -18,16 +25,8 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.imageio.ImageIO;
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.border.EtchedBorder;
-import logic.ZybezItemListing;
-import logic.ZybezOffer;
-import net.miginfocom.swing.MigLayout;
-import org.pushingpixels.trident.Timeline;
+
+import static rsclient.coregui.RSClient.*;
 
 /**
  *
@@ -38,7 +37,7 @@ public class ItemResultPanel extends JPanel implements MouseListener {
     private JLabel itemNameLabel, itemPriceLabel, itemPictureLabel;
     private ItemListingRolloverListener rolloverListener;
     private ArrayList<ZybezOffer> offerList = new ArrayList();
-    private final ImageIcon emptyItem = new ImageIcon(getClass().getClassLoader().getResource("resources/emptyitem.png"));
+    private final ImageIcon emptyItem = new ImageIcon(getClass().getClassLoader().getResource(String.format("%s/emptyitem.png", resourcePath)));
     private Timeline rolloverTimeline;
 
     public ItemResultPanel() {

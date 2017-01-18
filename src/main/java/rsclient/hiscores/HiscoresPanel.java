@@ -5,25 +5,23 @@
  */
 package rsclient.hiscores;
 
-import java.awt.Color;
-import java.awt.Font;
+import logic.Calculate;
+import logic.RuneScapeAccount;
+import net.miginfocom.swing.MigLayout;
+import org.pushingpixels.trident.Timeline;
+import rsclient.coregui.LengthRestrictedDocument;
+
+import javax.swing.*;
+import javax.swing.border.EtchedBorder;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.text.NumberFormat;
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.border.EtchedBorder;
-import logic.Calculate;
-import logic.RuneScapeAccount;
-import net.miginfocom.swing.MigLayout;
-import org.pushingpixels.trident.Timeline;
-import rsclient.coregui.LengthRestrictedDocument;
+
+import static rsclient.coregui.RSClient.*;
 
 /**
  *
@@ -109,7 +107,7 @@ public class HiscoresPanel extends JPanel implements StatRolloverListener {
         levelInfoPanel = new LevelInfoPanel();
 
         searchButton = new JButton();
-        searchButton.setIcon(new javax.swing.ImageIcon(getClass().getClassLoader().getResource("resources/searchiconsquare3.png")));
+        searchButton.setIcon(new javax.swing.ImageIcon(getClass().getClassLoader().getResource(String.format("%s/searchiconsquare3.png", resourcePath))));
         //searchButton.setIcon(new javax.swing.ImageIcon(getClass().getClassLoader().getResource("resources/bwsearch2.png")));
 	searchButton.setBorderPainted(false);
         searchButton.setFocusPainted(false);

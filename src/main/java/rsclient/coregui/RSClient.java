@@ -5,23 +5,18 @@
  */
 package rsclient.coregui;
 
-import java.awt.Color;
-import java.awt.Image;
-import java.awt.Toolkit;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.ImageIcon;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.UIManager;
 import net.miginfocom.swing.MigLayout;
 import org.pircbotx.exception.IrcException;
 import rsclient.toolbar.MainToolBar;
 import rsloader.Loader;
 import rsloader.Loader.Game;
 import rsreflection.Reflector;
+
+import javax.swing.*;
+import java.awt.*;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -30,6 +25,7 @@ import rsreflection.Reflector;
 public class RSClient {
 
 	public static Reflector reflector = null;
+	public static final String resourcePath = "./src/main/resources";
 
 	public static void main(String[] args) throws IrcException, IOException {
 
@@ -50,7 +46,7 @@ public class RSClient {
 
 	public static void initUI() {
 		JFrame mainwnd = new JFrame("Luna - Open source OSRS Client");
-		Image icon = Toolkit.getDefaultToolkit().getImage("resources/lunaicon.png");
+		Image icon = Toolkit.getDefaultToolkit().getImage(String.format("%s/lunaicon.png", resourcePath));
 		mainwnd.setIconImage(icon);
 		
 	

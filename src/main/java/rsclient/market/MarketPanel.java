@@ -5,23 +5,20 @@
  */
 package rsclient.market;
 
-import java.awt.Color;
-import java.awt.Font;
+import logic.ZybezQuery;
+import net.miginfocom.swing.MigLayout;
+import org.pushingpixels.trident.Timeline;
+
+import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.border.EtchedBorder;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.border.Border;
-import javax.swing.border.EtchedBorder;
-import logic.ZybezQuery;
-import net.miginfocom.swing.MigLayout;
-import org.pushingpixels.trident.Timeline;
+
+import static rsclient.coregui.RSClient.*;
 
 /**
  *
@@ -53,7 +50,7 @@ public class MarketPanel extends JPanel implements ItemListingRolloverListener {
         Border loweredbevel = BorderFactory.createEtchedBorder(EtchedBorder.RAISED);
         Font f = new Font(new JLabel().getFont().getFontName(), Font.BOLD, new JLabel().getFont().getSize() + 2);
         ImageIcon searchicon = new ImageIcon(
-                getClass().getClassLoader().getResource("resources/searchicon20.png"));
+                getClass().getClassLoader().getResource(String.format("%s/searchicon20.png", resourcePath)));
 
         itemDetailPanel = new ItemDetailPanel();
         itemInputField = new JTextField();
@@ -66,7 +63,7 @@ public class MarketPanel extends JPanel implements ItemListingRolloverListener {
         itemLabel.setForeground(Color.white);
         itemLabel.setFont(new Font(itemLabel.getFont().getFontName(), Font.BOLD, itemLabel.getFont().getSize()));
 
-        searchButton.setIcon(new javax.swing.ImageIcon(getClass().getClassLoader().getResource("resources/searchiconsquare3.png")));
+        searchButton.setIcon(new javax.swing.ImageIcon(getClass().getClassLoader().getResource(String.format("%s/searchiconsquare3.png", resourcePath))));
         searchButton.setBorderPainted(false);
         searchButton.setFocusPainted(false);
         searchButton.setContentAreaFilled(false);

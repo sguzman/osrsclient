@@ -5,14 +5,15 @@
  */
 package rsclient.hiscores;
 
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
 import logic.RuneScapeAccount;
 import net.miginfocom.swing.MigLayout;
 import rsclient.coregui.Style;
+
+import javax.swing.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+import static rsclient.coregui.RSClient.*;
 
 /**
  *
@@ -41,7 +42,8 @@ public class LevelScorePanel extends JPanel implements MouseListener {
         skillLevelLabel.addMouseListener(this);
 
         skillImageLabel = new JLabel(
-                new ImageIcon(getClass().getClassLoader().getResource("resources/logo_" + skill + ".gif")));
+                new ImageIcon(getClass().getClassLoader().getResource(
+                        String.format("%s/logo_%s.gif", resourcePath, skill))));
         skillImageLabel.addMouseListener(this);
 
         add(skillImageLabel, "cell 0 0, ");

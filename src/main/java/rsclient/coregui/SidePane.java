@@ -7,10 +7,11 @@ package rsclient.coregui;
 
 import rsclient.hiscores.HiscoresPanel;
 import rsclient.market.MarketPanel;
-import javax.swing.ImageIcon;
-import javax.swing.JPanel;
-import javax.swing.JTabbedPane;
 import rsclient.panelplugins.BasePluginPanel;
+
+import javax.swing.*;
+
+import static rsclient.coregui.RSClient.resourcePath;
 
 /**
  *
@@ -22,16 +23,16 @@ public class SidePane extends JTabbedPane {
         setTabLayoutPolicy(JTabbedPane.SCROLL_TAB_LAYOUT);
 
         ImageIcon statsicon = new ImageIcon(
-                getClass().getClassLoader().getResource("resources/statsicon.png"));
+                getClass().getClassLoader().getResource(String.format("%s/statsicon.png", resourcePath)));
 
         ImageIcon shopicon = new ImageIcon(
-                getClass().getClassLoader().getResource("resources/shopicon.png"));
+                getClass().getClassLoader().getResource(String.format("%s/shopicon.png", resourcePath)));
 
         ImageIcon graphicon = new ImageIcon(
-                getClass().getClassLoader().getResource("resources/graphicon.png"));
+                getClass().getClassLoader().getResource(String.format("%s/graphicon.png", resourcePath)));
 
         ImageIcon toolsicon = new ImageIcon(
-                getClass().getClassLoader().getResource("resources/toolsicon.png"));
+                getClass().getClassLoader().getResource(String.format("%s/toolsicon.png", resourcePath)));
 
         addTab(null, statsicon, new HiscoresPanel());
 
