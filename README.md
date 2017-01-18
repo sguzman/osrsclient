@@ -1,4 +1,4 @@
-Old School RuneScape Client
+ScaloRS
 ============================
 
 This is a new project dedicated to creating a Free and Open Source OSRS reflection client.<br>
