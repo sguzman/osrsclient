@@ -22,7 +22,7 @@ resolvers ++= Seq(
 libraryDependencies ++= Seq(
   "com.googlecode.json-simple" % "json-simple" % "1.1.1",
   "org.pircbotx" % "pircbotx" % "2.1",
-  "com.miglayout" % "miglayout" % "3.7.4"s
+  "com.miglayout" % "miglayout" % "3.7.4"
 )
 
 /** Make sure to fork on run */
