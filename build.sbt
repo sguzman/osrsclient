@@ -7,6 +7,9 @@ organization := "initialcommit.io"
 /** Project Version */
 version := "1.0"
 
+/** Do not download deps every time */
+updateOptions := updateOptions.value.withCachedResolution(true)
+
 /** Scala version */
 //scalaVersion := "2.12.1"
 
@@ -25,7 +28,9 @@ resolvers ++= Seq(
 libraryDependencies ++= Seq(
   "com.googlecode.json-simple" % "json-simple" % "1.1.1",
   "org.pircbotx" % "pircbotx" % "2.0.1",
-  "com.miglayout" % "miglayout" % "3.7.4"
+  "com.miglayout" % "miglayout" % "3.7.4",
+  "org.pushingpixels" % "flamengo" % "5.0",
+  "org.apache.commons" % "commons-io" % "1.3.2"
 )
 
 /** Make sure to fork on run */
