@@ -36,5 +36,5 @@ libraryDependencies ++= Seq(
 /** Make sure to fork on run */
 fork in run := true
 
-/** Copy dependencies to file */
-retrieveManaged := true
+/** Main class for assembly.sbt */
+mainClass in assembly := Some("rsclient.coregui.RSClient")
