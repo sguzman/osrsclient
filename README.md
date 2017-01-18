@@ -35,3 +35,12 @@ Future Features
 -IRC Chat client, supporting multiple IRC servers at once<br>
 -Full reflection integration (XP trackers, potion timers, etc)<br>
 ![osrsclient](https://raw.githubusercontent.com/bmoyer/osrsclient/master/src/resources/client.png "Client")
+
+Changes in this fork
+============================
+I have made a couple of changes in fork in order to modernize the program and hopefully getting it building correctly, which it was not doing before.
+The changes are as follows:
+- Use sbt build
+- ... that's about it
+
+Eventually the plan is to convert this to a scala project =D. Let's see if I get that far.
