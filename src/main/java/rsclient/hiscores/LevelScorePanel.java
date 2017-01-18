@@ -43,7 +43,7 @@ public class LevelScorePanel extends JPanel implements MouseListener {
 
         skillImageLabel = new JLabel(
                 new ImageIcon(getClass().getClassLoader().getResource(
-                        String.format("%s/logo_%s.gif", resourcePath, skill))));
+                        String.format("%slogo_%s.gif", resourcePath, skill))));
         skillImageLabel.addMouseListener(this);
 
         add(skillImageLabel, "cell 0 0, ");

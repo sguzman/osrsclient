@@ -37,7 +37,7 @@ public class ItemResultPanel extends JPanel implements MouseListener {
     private JLabel itemNameLabel, itemPriceLabel, itemPictureLabel;
     private ItemListingRolloverListener rolloverListener;
     private ArrayList<ZybezOffer> offerList = new ArrayList();
-    private final ImageIcon emptyItem = new ImageIcon(getClass().getClassLoader().getResource(String.format("%s/emptyitem.png", resourcePath)));
+    private final ImageIcon emptyItem = new ImageIcon(getClass().getClassLoader().getResource(String.format("%semptyitem.png", resourcePath)));
     private Timeline rolloverTimeline;
 
     public ItemResultPanel() {

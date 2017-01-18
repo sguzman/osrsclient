@@ -23,16 +23,16 @@ public class SidePane extends JTabbedPane {
         setTabLayoutPolicy(JTabbedPane.SCROLL_TAB_LAYOUT);
 
         ImageIcon statsicon = new ImageIcon(
-                getClass().getClassLoader().getResource(String.format("%s/statsicon.png", resourcePath)));
+                getClass().getClassLoader().getResource(String.format("%sstatsicon.png", resourcePath)));
 
         ImageIcon shopicon = new ImageIcon(
-                getClass().getClassLoader().getResource(String.format("%s/shopicon.png", resourcePath)));
+                getClass().getClassLoader().getResource(String.format("%sshopicon.png", resourcePath)));
 
         ImageIcon graphicon = new ImageIcon(
-                getClass().getClassLoader().getResource(String.format("%s/graphicon.png", resourcePath)));
+                getClass().getClassLoader().getResource(String.format("%sgraphicon.png", resourcePath)));
 
         ImageIcon toolsicon = new ImageIcon(
-                getClass().getClassLoader().getResource(String.format("%s/toolsicon.png", resourcePath)));
+                getClass().getClassLoader().getResource(String.format("%stoolsicon.png", resourcePath)));
 
         addTab(null, statsicon, new HiscoresPanel());
 

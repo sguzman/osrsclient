@@ -50,7 +50,7 @@ public class MarketPanel extends JPanel implements ItemListingRolloverListener {
         Border loweredbevel = BorderFactory.createEtchedBorder(EtchedBorder.RAISED);
         Font f = new Font(new JLabel().getFont().getFontName(), Font.BOLD, new JLabel().getFont().getSize() + 2);
         ImageIcon searchicon = new ImageIcon(
-                getClass().getClassLoader().getResource(String.format("%s/searchicon20.png", resourcePath)));
+                getClass().getClassLoader().getResource(String.format("%ssearchicon20.png", resourcePath)));
 
         itemDetailPanel = new ItemDetailPanel();
         itemInputField = new JTextField();
@@ -63,7 +63,7 @@ public class MarketPanel extends JPanel implements ItemListingRolloverListener {
         itemLabel.setForeground(Color.white);
         itemLabel.setFont(new Font(itemLabel.getFont().getFontName(), Font.BOLD, itemLabel.getFont().getSize()));
 
-        searchButton.setIcon(new javax.swing.ImageIcon(getClass().getClassLoader().getResource(String.format("%s/searchiconsquare3.png", resourcePath))));
+        searchButton.setIcon(new javax.swing.ImageIcon(getClass().getClassLoader().getResource(String.format("%ssearchiconsquare3.png", resourcePath))));
         searchButton.setBorderPainted(false);
         searchButton.setFocusPainted(false);
         searchButton.setContentAreaFilled(false);

@@ -23,16 +23,16 @@ public class BottomPane extends JTabbedPane {
         setTabPlacement(RIGHT);
 
         ImageIcon settingsicon = new ImageIcon(
-                getClass().getClassLoader().getResource(String.format("%s/image2020.png", resourcePath)));
+                getClass().getClassLoader().getResource(String.format("%simage2020.png", resourcePath)));
 
         ImageIcon notesicon = new ImageIcon(
-                getClass().getClassLoader().getResource(String.format("%s/pencil.png", resourcePath)));
+                getClass().getClassLoader().getResource(String.format("%spencil.png", resourcePath)));
 
         ImageIcon chaticon = new ImageIcon(
-                getClass().getClassLoader().getResource(String.format("%s/chaticon.png", resourcePath)));
+                getClass().getClassLoader().getResource(String.format("%schaticon.png", resourcePath)));
 
         ImageIcon miscicon = new ImageIcon(
-                getClass().getClassLoader().getResource(String.format("%s/miscicon.png", resourcePath)));
+                getClass().getClassLoader().getResource(String.format("%smiscicon.png", resourcePath)));
 
         
         addTab(null, notesicon, new NotesPanel());

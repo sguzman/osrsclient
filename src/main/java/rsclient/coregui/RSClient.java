@@ -25,7 +25,7 @@ import java.util.logging.Logger;
 public class RSClient {
 
 	public static Reflector reflector = null;
-	public static final String resourcePath = "./src/main/resources";
+	public static final String resourcePath = "";
 
 	public static void main(String[] args) throws IrcException, IOException {
 
@@ -46,7 +46,7 @@ public class RSClient {
 
 	public static void initUI() {
 		JFrame mainwnd = new JFrame("Luna - Open source OSRS Client");
-		Image icon = Toolkit.getDefaultToolkit().getImage(String.format("%s/lunaicon.png", resourcePath));
+		Image icon = Toolkit.getDefaultToolkit().getImage(String.format("%slunaicon.png", resourcePath));
 		mainwnd.setIconImage(icon);
 		
 	

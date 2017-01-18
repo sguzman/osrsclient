@@ -107,7 +107,7 @@ public class HiscoresPanel extends JPanel implements StatRolloverListener {
         levelInfoPanel = new LevelInfoPanel();
 
         searchButton = new JButton();
-        searchButton.setIcon(new javax.swing.ImageIcon(getClass().getClassLoader().getResource(String.format("%s/searchiconsquare3.png", resourcePath))));
+        searchButton.setIcon(new javax.swing.ImageIcon(getClass().getClassLoader().getResource(String.format("%ssearchiconsquare3.png", resourcePath))));
         //searchButton.setIcon(new javax.swing.ImageIcon(getClass().getClassLoader().getResource("resources/bwsearch2.png")));
 	searchButton.setBorderPainted(false);
         searchButton.setFocusPainted(false);
