@@ -1,6 +1,9 @@
 /** Name of project */
 name := "ScaloRS"
 
+/** Organization */
+organization := "initialcommit.io"
+
 /** Project Version */
 version := "1.0"
 
@@ -21,7 +24,7 @@ resolvers ++= Seq(
 /** Source Dependencies */
 libraryDependencies ++= Seq(
   "com.googlecode.json-simple" % "json-simple" % "1.1.1",
-  "org.pircbotx" % "pircbotx" % "2.1",
+  "org.pircbotx" % "pircbotx" % "2.0.1",
   "com.miglayout" % "miglayout" % "3.7.4"
 )
 
