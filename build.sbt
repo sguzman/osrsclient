@@ -27,8 +27,5 @@ libraryDependencies ++= Seq(
 /** Make sure to fork on run */
 fork in run := true
 
-/** Add resources to java library path */
-javaOptions in run += "-Djava.library.path=src/main/resources"
-
 /** Copy dependencies to file */
 retrieveManaged := true
