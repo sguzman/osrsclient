@@ -1,5 +1,5 @@
 /** Name of project */
-name := "osrsclientScala"
+name := "ScaloRS"
 
 /** Project Version */
 version := "1.0"
